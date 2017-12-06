@@ -15,11 +15,14 @@ public class FileReader {
 		}
 	}
 	
+	boolean hasNext() {
+		return file.hasNext();
+	}
+	
 	String getLine() {
 		if(file.hasNextLine()) {
 			return file.nextLine();
 		}else {
-			file.close();
 			return "";
 		}
 	}

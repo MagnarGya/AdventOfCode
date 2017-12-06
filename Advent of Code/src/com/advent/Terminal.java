@@ -2,7 +2,7 @@ package com.advent;
 import java.util.Scanner;
 
 public class Terminal {
-	static String[] choices = {"Day 1: Inverse Captcha"};
+	static String[] choices = {"Day 1: Inverse Captcha","Day 2: Corruption Checksum"};
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -14,6 +14,7 @@ public class Terminal {
 		int choice = input.nextInt();
 		switch(choice) {
 		case 1 : new InverseCaptcha().run();
+		case 2 : new Checksum().run();
 		}
 	}
 
