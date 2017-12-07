@@ -3,11 +3,12 @@ package com.advent;
 import com.advent.Day1.InverseCaptcha;
 import com.advent.Day2.Checksum;
 import com.advent.Day3.MemoryRetrival;
+import com.advent.Day7.MemoryTower;
 
 import java.util.Scanner;
 
 public class Terminal {
-	static String[] choices = {"Day 1: Inverse Captcha","Day 2: Corruption Checksum","Day 3: Spiral Memory","Day 7:"};
+	static String[] choices = {"Day 1: Inverse Captcha","Day 2: Corruption Checksum","Day 3: Spiral Memory","Day 7: Recursive Circus"};
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -21,6 +22,7 @@ public class Terminal {
 		case 1 : new InverseCaptcha().run();
 		case 2 : new Checksum().run();
 		case 3 : new MemoryRetrival().run();
+		case 7 : new MemoryTower().run();
 		}
 		input.close();
 	}
