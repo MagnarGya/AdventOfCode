@@ -1,4 +1,6 @@
-package com.advent;
+package com.advent.Day1;
+
+import com.advent.FileReader;
 
 public class InverseCaptcha {
 	
@@ -28,5 +30,6 @@ public class InverseCaptcha {
 		}
 		
 		System.out.println("Part 2: "+sum);
+		fr.close();
 	}
 }

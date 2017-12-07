@@ -1,8 +1,10 @@
-package com.advent;
+package com.advent.Day2;
+
+import com.advent.*;
 
 public class Checksum {
 	
-	void run() {
+	public void run() {
 		FileReader fr = new FileReader("input/Day2");
 		
 		
@@ -39,5 +41,6 @@ public class Checksum {
 		
 		System.out.println("Part 1: "+checksum1);
 		System.out.println("Part 2: "+checksum2);
+		fr.close();
 	}
 }

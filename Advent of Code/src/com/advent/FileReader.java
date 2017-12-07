@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class FileReader {
 	Scanner file;
 	
-	FileReader(String path){
+	public FileReader(String path){
 		try {
 			file = new Scanner(new File(path));
 		} catch (FileNotFoundException e) {
@@ -15,15 +15,18 @@ public class FileReader {
 		}
 	}
 	
-	boolean hasNext() {
+	public boolean hasNext() {
 		return file.hasNext();
 	}
 	
-	String getLine() {
+	public String getLine() {
 		if(file.hasNextLine()) {
 			return file.nextLine();
 		}else {
 			return "";
 		}
+	}
+	public void close() {
+		file.close();
 	}
 }
