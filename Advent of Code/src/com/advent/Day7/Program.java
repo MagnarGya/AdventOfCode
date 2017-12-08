@@ -45,17 +45,32 @@ public class Program {
 			for(int i = 0; i < weights.length; i++) {
 				weights[i] = children[i].checkWeight();
 			}
-			for(int i = 1; i < weights.length; i++) {
-				if(weights[i-1]!=weights[i]) {
-					if(i==1&&weights[i]!=weights[i+1]) {
-						return weights[i];
-					}else {
-						return weights[i-1];
-					}
+			int normal = weights[0];
+			int index = 0;
+			boolean LastWasEqual = true;
+			boolean unEqual = false;
+			for(int i = 1; i < weights.length+2; i++) {
+				if(weights[i%weights.length]!=normal&&LastWasEqual) {
+					LastWasEqual = false;
+				}else if(weights[i%weights.length]!=normal&&!LastWasEqual) {
+					normal = weights[i%weights.length];
+					index = (i-1)%weights.length;
+					unEqual = true;
 				}
+				
 			}
-			return weight + (weights[0]*weights.length);
+			if(unEqual) {
+				for(int i = 0; i < weights.length; i++) {
+					System.out.println(weights[i]);
+				}
+				int difference = normal - weights[index];
+				System.out.println("Part 2: " + (children[index].weight-difference) + " " + children[index+2].weight);
+				return weight + (normal*weights.length);
+			}else {
+				return weight + (normal*weights.length);
+			}
 		}
 	}
+	
 	
 }

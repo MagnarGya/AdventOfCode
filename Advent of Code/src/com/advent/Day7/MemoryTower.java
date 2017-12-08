@@ -46,7 +46,7 @@ public class MemoryTower {
 			}
 		}
 		System.out.println("Part 1: "+top.name);
-		System.out.println("Part 2: "+top.checkWeight());
+		top.checkWeight();
 		
 	}
 }
