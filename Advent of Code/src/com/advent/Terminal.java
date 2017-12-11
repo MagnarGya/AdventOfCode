@@ -5,12 +5,13 @@ import com.advent.Day2.Checksum;
 import com.advent.Day3.MemoryRetrival;
 import com.advent.Day7.MemoryTower;
 import com.advent.Day8.RegisterMonitor;
+import com.advent.Day9.StreamAnalyser;
 
 import java.util.Scanner;
 
 public class Terminal {
 	static String[] choices = {"Day 1: Inverse Captcha","Day 2: Corruption Checksum","Day 3: Spiral Memory",
-			"Day 7: Recursive Circus","Day 8: I Heard You Like Registers"};
+			"Day 7: Recursive Circus","Day 8: I Heard You Like Registers","Day 9: Stream Processing", "Day 10: Knot Hash"};
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
@@ -26,6 +27,7 @@ public class Terminal {
 		case 3 : new MemoryRetrival().run();
 		case 7 : new MemoryTower().run();
 		case 8 : new RegisterMonitor().run();
+		case 9 : new StreamAnalyser().run();
 		}
 		input.close();
 	}
